@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage {
     //TODO: вставить свой, бот не работает
-    private String userName = "";
-    private String userPassword = "";
+    private String userName = "89818031004";
+    private String userPassword = "15spgpfo";
 
     private static final By loginField = By.id("field_email");
     private static final By passwordField = By.id("field_password");

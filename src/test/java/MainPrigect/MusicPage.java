@@ -24,18 +24,31 @@ public class MusicPage extends BasePage {
             if (name.equals(element.getName())) {
                 element.element.click();
             }
+            //System.out.println(element.getName());
         }
     }
+    public MyMusicPage clickMyMusic(){
+        clickOnMenu(BasePage.NAME_MUSIC);
+        return new MyMusicPage(driver);
+    }
 
-    public RadioPage clickRadio(String name) {
-        clickOnMenu(name);
+    public CatalogPage clickCatalog() {
+
+        clickOnMenu(BasePage.NAME_MUSIC);
+        return new CatalogPage(driver);
+    }
+
+    public CatalogPageSearch clickCatalogSearch(){
+        clickOnMenu(BasePage.NAME_CATALOG);
+        return new CatalogPageSearch(driver);
+    }
+
+    public RadioPage clickRadio() {
+        clickOnMenu(BasePage.NAME_RADIO);
         return new RadioPage(driver);
     }
 
-    public CatalogPage clickCatalog(String name) {
-        clickOnMenu(name);
-        return new CatalogPage(driver);
-    }
+
 
     @Override
     public void check() {
