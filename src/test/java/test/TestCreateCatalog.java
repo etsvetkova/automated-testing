@@ -19,12 +19,5 @@ public class TestCreateCatalog extends TestBase{
        // WorkWithCatalogPage workWithCatalogPage = createCatalogPage.checkCatalog();
          DeleteCatalogPage deleteCatalogPage = workWithCatalogPage.setDeleteCatalog();
          deleteCatalogPage.delete();
-
-
-    }
-
-    @After
-    public void deleteNewCatalog() {
-
     }
 }

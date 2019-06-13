@@ -43,7 +43,6 @@ public class WorkWithCatalogPage extends BasePage {
         }
     }
 
-
     public DeleteCatalogPage setDeleteCatalog() {
         driver.findElement(deleteCatalog).click();
         return new DeleteCatalogPage(driver);
