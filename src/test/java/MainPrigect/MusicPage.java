@@ -8,7 +8,8 @@ import java.util.List;
 
 public class MusicPage extends BasePage {
     private static final By partOfMusic = By.className("mml_cat_li");
-    private static final By BUTTON_MY_RADIO = By.xpath(".//*[@id='lmSecm_sec_my_radio']");//.//*[@class='mml_cat_li']//*[contains(text(),'Моё радио')]");
+    private static final By BUTTON_MY_RADIO = By.xpath(".//*[@id='lmSecm_sec_my_radio']");
+    private static final By BUTTON_MY_MUSIC = By.xpath(".//*[@id='lmSecm_sec_klass']");
 
     protected final String NAME_MUSIC = "Моя музыка";
     protected final String NAME_CATALOG = "Сборники";
@@ -22,9 +23,15 @@ public class MusicPage extends BasePage {
         return new RadioPage(driver);
     }
 
+    public CatalogPage clickCatalog() {
+        driver.findElement(BUTTON_MY_MUSIC).click();
+        return new CatalogPage(driver);
+    }
+
     @Override
     public void check() {
-        checkVisibleElement("no element in Music menu", BUTTON_MY_RADIO);
+        checkVisibleElement("no element My radio", BUTTON_MY_RADIO);
+        checkVisibleElement("no element My music", BUTTON_MY_MUSIC);
     }
 
     public List<CardListMusic> findMenu() {
@@ -45,11 +52,7 @@ public class MusicPage extends BasePage {
         return new MyMusicPage(driver);
     }
 
-    public CatalogPage clickCatalog() {
 
-        clickOnMenu(NAME_MUSIC);
-        return new CatalogPage(driver);
-    }
 
     public CatalogPageSearch clickCatalogSearch(){
         clickOnMenu(NAME_CATALOG);
