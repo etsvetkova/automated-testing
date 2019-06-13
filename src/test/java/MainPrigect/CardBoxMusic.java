@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 public class CardBoxMusic {
     WebElement element;
-    private static final By NAME = By.xpath(".//*[@class='mml_ucard_n_f']");
+    private final By NAME = By.xpath(".//*[@class='mml_ucard_n_f']");
 
     public CardBoxMusic (WebElement element) {
         this.element = element;

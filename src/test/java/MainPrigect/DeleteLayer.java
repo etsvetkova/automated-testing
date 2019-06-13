@@ -11,18 +11,18 @@ public class DeleteLayer extends BasePage {
     public DeleteLayer(WebDriver driver) {super(driver);}
 
     public FoundedCatalog sendDelete(){
-        Assert.assertTrue("Нет кнопки удаления ",isElementPresent(BUTTON_DELETE));
+        Assert.assertTrue("Нет кнопки удаления ",isElementVisible(BUTTON_DELETE));
         driver.findElement(BUTTON_DELETE).click();
         return new FoundedCatalog(driver);
     }
 
     @Override
     public void check(){
-        Assert.assertTrue("Не прогрузилась кнопка Удалить",
+        /*Assert.assertTrue("Не прогрузилась кнопка Удалить",
                 explicitWait(ExpectedConditions.visibilityOfElementLocated(BUTTON_DELETE),
                         5,300));
         Assert.assertTrue("Не прогрузилась кнопка Отменить",
                 explicitWait(ExpectedConditions.visibilityOfElementLocated(BUTTON_CANCEL),
-                        5,300));
+                        5,300));*/
     }
 }

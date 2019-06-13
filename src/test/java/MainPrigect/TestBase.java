@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase {
-    protected static final String baseUrl = "https://ok.ru";
+    protected final String BASE_URL = "https://ok.ru";
     protected WebDriver driver;
 
 
@@ -16,11 +16,6 @@ public abstract class TestBase {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get(baseUrl + "/");
+        driver.get(BASE_URL + "/");
     }
-    /*public WebDriver init() {
-        driver = new ChromeDriver();
-        driver.get(baseUrl);
-        return driver;
-    }*/
 }

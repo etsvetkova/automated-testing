@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CardListMusic {
     public WebElement element;
-    private static final By NAME = By.className("mml_cat_n");
+    private final By NAME = By.className("mml_cat_n");
 
     public CardListMusic (WebElement element) {
         this.element = element;

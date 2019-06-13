@@ -13,7 +13,7 @@ public class CatalogPageSearch extends BasePage {
     private static final By SEARCH_CATALOG = By.xpath(".//*[@class='vl_btn']");
 
     public CatalogPageSearch searchCatalog (String name) {
-        Assert.assertTrue("Нет поля поиска ",isElementPresent(SEARCH));
+        Assert.assertTrue("Нет поля поиска ",isElementVisible(SEARCH));
         driver.findElement(SEARCH).clear();
         driver.findElement(SEARCH).sendKeys(name);
         driver.findElement(SEARCH_CATALOG).click();

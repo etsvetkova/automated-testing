@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class CreateCatalogPage extends BasePage {
-    private static final By newCatalogName = By.xpath(".//*[@class='it vl_it']");
-    private static final By buttonCreate = By.xpath(".//*[@class='vl_btn']");
-    private static final By form = By.xpath(".//*[@class='form-actions']");
+    private final By newCatalogName = By.xpath(".//*[@class='it vl_it']");
+    private final By buttonCreate = By.xpath(".//*[@class='vl_btn']");
+    private final By form = By.xpath(".//*[@class='form-actions']");
 
-    private static final String CATALOG_NAME = "MY NEW CATALOG";
+    private final String CATALOG_NAME = "MY NEW CATALOG";
 
-    private static final By partOfBox = By.xpath(".//*[@class='mml_subcat_btn ']");
+    private final By partOfBox = By.xpath(".//*[@class='mml_subcat_btn ']");
 
 
     public CreateCatalogPage(WebDriver driver) {
