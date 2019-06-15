@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends BasePage {
     //TODO: вставить свой, бот не работает
-    private String USER_NAME = "89818031004";
-    private String USER_PASSWORD = "15spgpfo";
+    private String USER_NAME = "";
+    private String USER_PASSWORD = "";
 
     private static final By LOGIN_FIELD = By.id("field_email");
     private static final By PASSWORD_FIELD = By.id("field_password");

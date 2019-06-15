@@ -9,7 +9,7 @@ public class CatalogPage extends BasePage  {
     public CatalogPage(WebDriver driver) {
         super(driver);
     }
-    
+
     public CreateCatalogPage clickToCreateCatalog () {
         driver.findElement(CREATE_CATALOG).click();
         return new CreateCatalogPage(driver);

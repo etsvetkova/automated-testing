@@ -35,6 +35,7 @@ public class WorkWithCatalogPage extends BasePage {
     }
 
     public boolean checkCreateCatalog() {
+        driver.navigate().refresh();
         if (!findAllCatalogs().isEmpty()) {
             return che();
         } else {

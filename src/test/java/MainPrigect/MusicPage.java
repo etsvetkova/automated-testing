@@ -32,6 +32,7 @@ public class MusicPage extends BasePage {
     public void check() {
         checkVisibleElement("no element My radio", BUTTON_MY_RADIO);
         checkVisibleElement("no element My music", BUTTON_MY_MUSIC);
+        checkVisibleElement("no", By.xpath(".//*[@class='layer_scr mus-custom-scrolling']"));
     }
 
     public List<CardListMusic> findMenu() {
